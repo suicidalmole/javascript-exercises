@@ -2,6 +2,9 @@ const leapYears = function(year) {
     if (!(year % 100 == 0)) {               // test if century
         const result = (year % 4 == 0);     // test if leap year
         return result;
+    } else if (year % 400 == 0) {           // test if century that is still a leap year
+        const result = true;                // every 400 years
+        return result;
     } else {
         const result = false;
         return result;
