@@ -1,14 +1,19 @@
 const sumAll = function(parameter_1, parameter_2) {
     let sum = 0;
-    let start = Math.min(parameter_1, parameter_2);
-    if (start >= 0) {
-        const end = Math.max(parameter_1, parameter_2);
-        for (start; start <= end; start++) {
-            sum += start;
+    if (Number.isInteger(parameter_1) && Number.isInteger(parameter_2)) {
+        let start = Math.min(parameter_1, parameter_2);
+        if (start >= 0 ) {
+            const end = Math.max(parameter_1, parameter_2);
+            for (start; start <= end; start++) {
+                sum += start;
+            }
+        } else {
+        sum = 'ERROR';
         }
     } else {
         sum = 'ERROR';
     }
+
     return sum;
 };
 
