@@ -24,8 +24,9 @@ const multiply = function(array) {   // multiply values in an array and return t
   return product;
 };
 
-const power = function() {
-	
+const power = function(value_1, value_2) {      // raises value_1 to the power of value_2 and returns the 
+	const power = value_1 ** value_2;
+  return power;
 };
 
 const factorial = function() {
