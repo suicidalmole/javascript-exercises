@@ -29,8 +29,16 @@ const power = function(value_1, value_2) {      // raises value_1 to the power o
   return power;
 };
 
-const factorial = function() {
-	
+const factorial = function(factorial) {           // compute the factorial of the value
+	if (factorial === 0 || factorial === 1) {             //factorial of 0 or 1 is 1
+    return 1;
+  } else {
+      for (let i = factorial - 1; i >= 1; i--) {
+          factorial *= i;
+      }
+      }
+      return factorial;
+  
 };
 
 
