@@ -1,13 +1,21 @@
 const palindromes = string  => {
-    let cleanedString = string.replace((/\W/g), '');
-    console.log({cleanedString});
-    const stringArray = cleanedString.split('');
-    console.log({stringArray});
-    let reverseArray = stringArray;
-    reverseArray.reverse();
-    console.log({reverseArray});
+    const cleanedString = string
+        .replace((/\W/g), '')  //removes non word characters from string
+        .toLowerCase();
+    const stringArray = cleanedString.split('');        //split string into array
+    const reverseArray = stringArray.slice().reverse();
+    return arrayIsEqual(stringArray, reverseArray);
     
-    
+};
+
+function arrayIsEqual(a, b) {
+    const strA = a.join();
+    const strB = b.join();
+    console.log(strA);
+    console.log(strB);
+    console.log(strA == strB ? true : false);
+    return strA == strB ? true : false;
+
 };
 // Do not edit below this line
 module.exports = palindromes;
